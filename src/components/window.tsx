@@ -5,13 +5,13 @@ import type { ReactNode } from "react";
 
 interface windowProps {
     title: string,
-    childeren: ReactNode;
     onClose: () => void
+    childeren: ReactNode;
 }
 
 
 
-export const Window = ({ title, childeren, onClose }: windowProps) => {
+export const Window = ({ title, onClose, childeren }: windowProps) => {
     return (
         <Draggable handle=".window.header" bounds="parent">
             <div className="absolute w-[500px] h-[350px] bg-slate-900 border border-slate-700 rounded-t-lg shadow-2xl flex flex-col overflow-hidden">
