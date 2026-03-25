@@ -11,8 +11,8 @@ export function Desktop() {
                 <Settings size={64} className="text-gray-500 transition-colors cursor-pointer" />
                 <X size={64} className="text-black-500 transition-colors cursor-pointer" />
 
-                
-            </div>        
+
+            </div>
         </main>
     )
 }
