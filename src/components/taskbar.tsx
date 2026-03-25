@@ -4,8 +4,8 @@ export function Taskbar() {
 
     return (
         <main>
-            <div className="TaskbarClass" style={{color: "gray", top: "90%"}}>
-
+            <div className="bg-gray-500 w-full absolute bottom-[0%] top-[96%]">
+                test
             </div>
         </main>
     )
