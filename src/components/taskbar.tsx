@@ -7,12 +7,14 @@ const iconen = [Monitor, Folder, Settings]
 
 const amount_icons = iconen.length
 
-export function Taskbar() {
+export function Taskbar({ onStartClick }: TaskBarProps) {
     return (
         <main>
             <div className="bg-gray-600 w-full absolute bottom-0 flex items-center px-2 h-12">
                 {iconen.map((Icoon, index) => (
-                <Icoon key={index} size={48}></Icoon>
+                    <button onClick={onStartClick}>
+                        <Icoon key={index} size={48}></Icoon>
+                    </button>
                 ))}
             </div>
         </main>
