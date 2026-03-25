@@ -1,7 +1,9 @@
+import { Desktop } from "./components/desktop"
+
 function App() {
   return (
     <main>
-    <div className="bg-red-500 text-blue-500">Hello world!</div>
+    <Desktop /> 
       </main>
   )
 }
