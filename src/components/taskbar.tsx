@@ -1,3 +1,7 @@
+interface TaskBarProps {
+    onStartClick: () => void
+}
+
 export function Taskbar() {
 
 
