@@ -1,7 +1,7 @@
 interface TaskbarProps {
     onStartClick: () => void
 }
-import { Monitor, Folder, Settings, X} from 'lucide-react';
+import { Monitor, Folder, Settings, X, Trash } from 'lucide-react';
 
 const iconen = [Monitor, Folder, Settings];
 
@@ -31,6 +31,12 @@ export function Taskbar({ onStartClick }: TaskbarProps) {
                     className="hover:bg-white/10 p-1 rounded transition-colors mx-1"
                 >
                     <X size={32} className="text-black-500 transition-colors cursor-pointer" />                
+                </button>
+                <button
+                    onClick={onStartClick}
+                    className="hover:bg-white/10 p-1 rounded transition-colors mx-1"
+                >
+                    <Trash size={32} className='text-gray-300 transition-colors cursor-pointer'/>               
                 </button>
         </div>
     );

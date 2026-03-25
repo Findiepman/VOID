@@ -1,4 +1,4 @@
-import { Monitor, Folder, Settings, X, Notebook } from 'lucide-react';
+import { Monitor, Folder, Settings, X, Notebook, Trash } from 'lucide-react';
 
 interface DesktopProps {
     onOpenNotepad: () => void;
@@ -14,9 +14,8 @@ export function Desktop({ onOpenNotepad }: DesktopProps) {
                     <Settings size={64} className="text-gray-500 transition-colors cursor-pointer" />
                     <X size={64} className="text-black-500 transition-colors cursor-pointer" />
                     <Notebook size="64" className="text-yellow-500 transition-colors cursor-pointer"></Notebook>
+                    <Trash size={64} className='text-gray-300 transition-colors cursor-pointer'></Trash>
                 </div>
-
-
             </div>
         </main>
     )
