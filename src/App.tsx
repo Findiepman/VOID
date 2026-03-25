@@ -29,7 +29,7 @@ function App() {
       {/* LAAG 2: De Vensters */}
       {isNotepadOpen && (
         <div className="absolute inset-0 z-10 pointer-events-none">
-          <div className="pointer-events-none">
+          <div className="pointer-events-auto inline-block">
             <Window title="Notepad" onClose={() => setIsNotepadOpen(false)}>
               <Notepad />
             </Window>
