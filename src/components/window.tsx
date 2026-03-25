@@ -6,12 +6,12 @@ import type { ReactNode } from "react";
 interface windowProps {
     title: string,
     onClose: () => void
-    childeren: ReactNode;
+    children: ReactNode;
 }
 
 
 
-export const Window = ({ title, onClose, childeren }: windowProps) => {
+export const Window = ({ title, onClose, children }: windowProps) => {
     return (
         <Draggable handle=".window.header" bounds="parent">
             <div className="absolute w-[500px] h-[350px] bg-slate-900 border border-slate-700 rounded-t-lg shadow-2xl flex flex-col overflow-hidden">
@@ -24,7 +24,7 @@ export const Window = ({ title, onClose, childeren }: windowProps) => {
                     </div>
                 </div>
                 <div className="flex-grow overflow-auto bg-slate-950 p-4">
-                    {childeren}
+                    {children}
                 </div>
             </div>
         </Draggable>
