@@ -3,7 +3,6 @@ interface TaskbarProps {
 }
 import { Monitor, Folder, Settings, X, Trash } from 'lucide-react';
 
-const iconen = [Monitor, Folder, Settings];
 
 export function Taskbar({ onStartClick }: TaskbarProps) {
     return (
