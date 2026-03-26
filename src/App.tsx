@@ -12,9 +12,17 @@ const Notepad = () => (
     />
   </div>
 );
+const Trash = () => (
+  <div className="h-full w-full">
+    <div>
+      <p>Trash is leeg</p>
+    </div>
+  </div>
+)
 
 function App() {
   const [isNotepadOpen, setIsNotepadOpen] = useState(false)
+  const [isTrashOpen, setIsTrashOpen] = useState(false)
 
   return (
     // 'relative' is nodig zodat de absolute lagen binnen dit kader blijven
@@ -23,7 +31,7 @@ function App() {
 
       {/* LAAG 1: De Desktop */}
       <div className="absolute inset-0 z-0">
-        <Desktop onOpenNotepad={() => setIsNotepadOpen(true)} />
+        <Desktop onOpenNotepad={() => setIsNotepadOpen(true)} onOpenTrash={() => setIsTrashOpen(true)}/>
       </div>
 
       {/* LAAG 2: De Vensters */}
@@ -32,6 +40,15 @@ function App() {
           <div className="pointer-events-auto inline-block">
             <Window title="Notepad" onClose={() => setIsNotepadOpen(false)}>
               <Notepad />
+            </Window>
+          </div>
+        </div>
+      )}
+      {isTrashOpen && (
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          <div className="pointer-events-auto inline-block">
+            <Window title="Trash" onClose={() => setIsTrashOpen(false)}>
+              <Trash />
             </Window>
           </div>
         </div>

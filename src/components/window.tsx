@@ -19,7 +19,6 @@ export const Window = ({ title, onClose, children }: windowProps) => {
         <Draggable 
             nodeRef={nodeRef} 
             handle=".window-header" 
-            bounds="parent"
         >
             <div 
                 ref={nodeRef} 
